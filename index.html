@@ -1,380 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gustave Charles-Saigne</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gustave Charles-Saigne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    :root {
-      --bg:       #f7f5f0;
-      --surface:  #ffffff;
-      --text:     #1a1714;
-      --muted:    #6b6560;
-      --accent:   #2a4a7f;
-      --accent2:  #b84c2e;
-      --border:   #e2ddd8;
-      --serif:    'Lora', Georgia, serif;
-      --sans:     'Source Sans 3', system-ui, sans-serif;
-    }
+        :root {
+            --bg: #f7f5f0;
+            --surface: #ffffff;
+            --text: #1a1714;
+            --muted: #6b6560;
+            --accent: #2a4a7f;
+            --accent2: #b84c2e;
+            --border: #e2ddd8;
+            --serif: 'Lora', Georgia, serif;
+            --sans: 'Source Sans 3', system-ui, sans-serif;
+        }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.65;
-    }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.65;
+        }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
 
-    /* ── Layout ── */
-    .page {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 60px 24px 80px;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    /* ── Hero ── */
-    .hero {
-      display: flex;
-      gap: 48px;
-      align-items: flex-start;
-      margin-bottom: 60px;
-    }
+        /* ── Layout ── */
+        .page {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
 
-    .hero-text { flex: 1; }
+        .hero {
+            display: flex;
+            gap: 48px;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
 
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 16px;
-    }
+        .hero-text {
+            flex: 1;
+        }
 
-    .hero p {
-      font-size: 0.97rem;
-      color: #2e2b28;
-      margin-bottom: 12px;
-    }
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 16px;
+        }
 
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 0;
-      margin-top: 20px;
-      font-size: 0.9rem;
-    }
+        .hero p {
+            font-size: 0.97rem;
+            color: #2e2b28;
+            margin-bottom: 12px;
+        }
 
-    .hero-links a {
-      color: var(--accent);
-      font-weight: 600;
-    }
+        .hero-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
 
-    .hero-links span {
-      color: var(--muted);
-      padding: 0 8px;
-    }
+        .hero-links a {
+            color: var(--accent);
+            font-weight: 600;
+        }
 
-    .avatar {
-      width: 160px;
-      flex-shrink: 0;
-      border-radius: 6px;
-      overflow: hidden;
-      background: var(--border);
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        .hero-links span {
+            color: var(--muted);
+            padding: 0 8px;
+        }
 
-    .avatar-placeholder {
-      width: 160px;
-      height: 160px;
-      background: linear-gradient(135deg, #d5cfc8 0%, #bfb9b1 100%);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
+        .avatar {
+            width: 160px;
+            flex-shrink: 0;
+            border-radius: 6px;
+            overflow: hidden;
+            background: var(--border);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .avatar-placeholder svg { opacity: 0.45; }
+        .avatar-placeholder {
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(135deg, #d5cfc8 0%, #bfb9b1 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-    /* ── Section headers ── */
-    .section-title {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
+        .avatar-placeholder svg {
+            opacity: 0.45;
+        }
 
-    .section-subtitle {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
+        .section-title {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
 
-    /* ── Research items ── */
-    .research-list { display: flex; flex-direction: column; gap: 32px; }
+        .section-subtitle {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
 
-    .research-item {
-      display: flex;
-      gap: 28px;
-      align-items: flex-start;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--border);
-    }
+        .research-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
 
-    .research-item:last-child { border-bottom: none; }
+        .research-item {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
 
-    .research-thumb {
-      width: 120px;
-      flex-shrink: 0;
-      aspect-ratio: 4/3;
-      border-radius: 4px;
-      background: var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+        .research-item:last-child {
+            border-bottom: none;
+        }
 
-    .research-body { flex: 1; }
+        .research-thumb {
+            width: 120px;
+            flex-shrink: 0;
+            aspect-ratio: 4/3;
+            border-radius: 4px;
+            background: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
-    .research-title {
-      font-family: var(--serif);
-      font-size: 0.98rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.4;
-      margin-bottom: 4px;
-    }
+        .research-body {
+            flex: 1;
+        }
 
-    .research-where {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
+        .research-title {
+            font-family: var(--serif);
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
 
-    .research-where em {
-      color: var(--accent2);
-      font-style: normal;
-      font-weight: 600;
-    }
+        .research-where {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
 
-    .research-desc {
-      font-size: 0.88rem;
-      color: #3a3632;
-      line-height: 1.55;
-    }
+        .research-where em {
+            color: var(--accent2);
+            font-style: normal;
+            font-weight: 600;
+        }
 
-    /* ── Education ── */
-    .edu-list { display: flex; flex-direction: column; gap: 14px; }
+        .research-desc {
+            font-size: 0.88rem;
+            color: #3a3632;
+            line-height: 1.55;
+        }
 
-    .edu-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
-    }
+        .edu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
 
-    .edu-item:last-child { border-bottom: none; }
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
 
-    .edu-degree { font-weight: 600; }
-    .edu-school { color: var(--muted); font-size: 0.85rem; margin-top: 1px; }
-    .edu-year { color: var(--muted); font-size: 0.83rem; white-space: nowrap; flex-shrink: 0; }
+        .edu-item:last-child {
+            border-bottom: none;
+        }
 
-    /* ── Section spacing ── */
-    .section { margin-bottom: 52px; }
+        .edu-degree {
+            font-weight: 600;
+        }
 
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+        .edu-school {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 1px;
+        }
 
-    /* ── Thumb icons (SVG placeholders) ── */
-    .thumb-icon { opacity: 0.3; }
+        .edu-year {
+            color: var(--muted);
+            font-size: 0.83rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
 
-    @media (max-width: 600px) {
-      .hero { flex-direction: column-reverse; gap: 24px; }
-      .avatar-placeholder { width: 120px; height: 120px; }
-      .research-thumb { width: 90px; }
-      .research-item { gap: 16px; }
-    }
-  </style>
+        .section {
+            margin-bottom: 52px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .thumb-icon {
+            opacity: 0.3;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                flex-direction: column-reverse;
+                gap: 24px;
+            }
+
+            .avatar-placeholder {
+                width: 120px;
+                height: 120px;
+            }
+
+            .research-thumb {
+                width: 90px;
+            }
+
+            .research-item {
+                gap: 16px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<div class="page">
+    <div class="page">
 
-  <!-- ── Hero ── -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Gustave Charles-Saigne</h1>
-      <p>
-        I'm a Master's student in Cybersecurity at
-        <a href="https://www.epfl.ch">EPFL</a> &amp;
-        <a href="https://ethz.ch">ETH Zurich</a>.
-        My work sits at the intersection of AI security and cryptography —
-        right now I'm focused on what happens when robots start running AI models
-        that nobody has properly secured yet.
-      </p>
-      <p>
-        At the ETH Robotics Club I co-lead a team looking into security
-        for AI-driven robots, spanning everything from hidden backdoors in
-        pre-trained models to wireless and software vulnerabilities.
-        On the cryptography side, I've worked on
-        fast proof systems for encrypted computations and post-quantum
-        cryptographic schemes.
-      </p>
-      <div class="hero-links">
-        <a href="mailto:gcharles@ethz.ch">Email</a>
-        <span>/</span>
-        <a href="#">CV</a>
-        <span>/</span>
-        <a href="#">GitHub</a>
-      </div>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Gustave Charles-Saigne</h1>
+                <p>
+                    I'm a Master's student in Cybersecurity at
+                    <a href="https://www.epfl.ch">EPFL</a> &amp;
+                    <a href="https://ethz.ch">ETH Zurich</a>.
+                    My work sits at the intersection of AI security and cryptography.
+                    Right now I'm focused on what happens when robots start running AI models
+                    that nobody has properly secured yet.
+                </p>
+                <p>
+                    Before, I've worked on proof systems for encrypted computations and post-quantum
+                    cryptographic schemes.
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:gcharles@ethz.ch">Email</a>
+                    <span>/</span>
+                    <a href="#">CV</a>
+                    <span>/</span>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+
+            <div class="avatar-placeholder">
+                <img src="data/profile.JPG" alt="Gustave Charles-Saigne"
+                    style="width:100%;height:100%;object-fit:cover;border-radius:6px;" />
+            </div>
+        </section>
+
+        <!-- ── Research ── -->
+        <section class="section">
+            <div class="section-title">Research</div>
+            <div class="section-subtitle">I'm broadly interested in security for (embodied) AI systems and modern
+                cryptography.</div>
+
+            <div class="research-list">
+
+                <div class="research-item">
+                    <div class="research-thumb">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="thumb-icon">
+                            <rect x="8" y="28" width="32" height="12" rx="3" fill="#2a4a7f" />
+                            <circle cx="24" cy="16" r="9" fill="#2a4a7f" />
+                            <rect x="20" y="14" width="8" height="4" rx="1" fill="white" />
+                        </svg>
+                    </div>
+                    <div class="research-body">
+                        <div class="research-title">Backdoors in Fine-tuned Robot AI Models</div>
+                        <div class="research-where">ETH Robotics Club &nbsp;·&nbsp; <em>2026 – present</em></div>
+                        <div class="research-desc">
+                            When someone downloads a pre-trained AI model for a robot and fine-tunes it on their own
+                            data,
+                            could that model already contain a hidden backdoor that wakes up during fine-tuning?
+                            We're adapting this threat model from language models to the robotics setting, where a
+                            triggered
+                            backdoor has real physical consequences.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-thumb">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="thumb-icon">
+                            <circle cx="24" cy="24" r="14" stroke="#b84c2e" stroke-width="3" fill="none" />
+                            <path d="M16 18 L32 18 L32 30 L16 30 Z" fill="#b84c2e" opacity="0.5" />
+                            <path d="M20 24 L28 24" stroke="#b84c2e" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="research-body">
+                        <div class="research-title">Attacking and Defending Robot AI at Inference Time</div>
+                        <div class="research-where">ETH Robotics Club &nbsp;·&nbsp; <em>2026 – present</em></div>
+                        <div class="research-desc">
+                            We're stress-testing embodied AI models that control robots by feeding them inference-time
+                            adversarial inputs
+                            and observing what the model sees, how it understands instructions, and what actions it
+                            outputs.
+                            We're also building defenses inspired by prompt-injection-prevention techniques
+                            from AI security, applied to the robotics pipeline.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-thumb">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="thumb-icon">
+                            <rect x="10" y="10" width="12" height="12" rx="2" fill="#2a4a7f" />
+                            <rect x="26" y="10" width="12" height="12" rx="2" fill="#2a4a7f" opacity="0.5" />
+                            <rect x="10" y="26" width="12" height="12" rx="2" fill="#2a4a7f" opacity="0.5" />
+                            <rect x="26" y="26" width="12" height="12" rx="2" fill="#2a4a7f" />
+                            <path d="M22 16 L26 16 M32 22 L32 26 M22 32 L26 32 M16 22 L16 26" stroke="#2a4a7f"
+                                stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="research-body">
+                        <div class="research-title">zkFHE</div>
+                        <div class="research-where">COMPSEC Lab, EPFL &nbsp;·&nbsp; <em>Feb 2025 – Dec 2025</em>
+                            &nbsp;·&nbsp; Supervisor: Christian Knabenhans</div>
+                        <div class="research-desc">
+                            Designed and built a fast, modular library for creating cryptographic proofs to ensure a FHE
+                            computation
+                            was done correctly.
+                            Started as a semester project and grew into a full implementation and research paper,
+                            in collaboration with Prof. Chiesa's group.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-thumb">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="thumb-icon">
+                            <path d="M24 8 L38 36 L10 36 Z" fill="none" stroke="#6b6560" stroke-width="2.5" />
+                            <circle cx="24" cy="22" r="4" fill="#6b6560" />
+                            <line x1="24" y1="26" x2="24" y2="33" stroke="#6b6560" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="research-body">
+                        <div class="research-title">Post-Quantum Proof Systems at Nethermind</div>
+                        <div class="research-where">Nethermind &nbsp;·&nbsp; <em>Sept 2024 – Dec 2024</em> &nbsp;·&nbsp;
+                            Cryptography Research Intern</div>
+                        <div class="research-desc">
+                            Contributed to the Rust implementation of LatticeFold, a proof system
+                            built on lattice math that remains secure against quantum computers.
+                            Participated in the research effort to implement <a
+                                href="https://github.com/NethermindEth/condor-rs"> Falcon</a>, a post-quantum signature
+                            scheme.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── Education ── -->
+        <section class="section">
+            <div class="section-title">Education</div>
+            <div class="edu-list">
+                <div class="edu-item">
+                    <div>
+                        <div class="edu-degree">Joint M.Sc. in Cybersecurity</div>
+                        <div class="edu-school"><a href="https://www.epfl.ch">EPFL</a> &amp; <a
+                                href="https://ethz.ch">ETH Zurich</a></div>
+                    </div>
+                    <div class="edu-year">2024 – 2027</div>
+                </div>
+                <div class="edu-item">
+                    <div>
+                        <div class="edu-degree">B.Sc. in Computer Science</div>
+                        <div class="edu-school"><a href="https://www.epfl.ch">EPFL</a></div>
+                    </div>
+                    <div class="edu-year">2021 – 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Design inspired by <a href="https://jonbarron.info/">Jon Barron's website</a>. Produce with <a
+                    href="https://claude.ai/new"> Claude</a>.</p>
+        </footer>
+
     </div>
-
-    <!-- Placeholder avatar — swap src for a real photo -->
-    <div class="avatar-placeholder">
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="thumb-icon">
-        <circle cx="32" cy="22" r="13" fill="#555"/>
-        <path d="M6 58c0-14.359 11.640-26 26-26s26 11.641 26 26" fill="#555"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ── Research ── -->
-  <section class="section">
-    <div class="section-title">Research</div>
-    <div class="section-subtitle">I'm broadly interested in security for AI systems and modern cryptography.</div>
-
-    <div class="research-list">
-
-      <div class="research-item">
-        <div class="research-thumb">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="thumb-icon">
-            <rect x="8" y="28" width="32" height="12" rx="3" fill="#2a4a7f"/>
-            <circle cx="24" cy="16" r="9" fill="#2a4a7f"/>
-            <rect x="20" y="14" width="8" height="4" rx="1" fill="white"/>
-          </svg>
-        </div>
-        <div class="research-body">
-          <div class="research-title">Backdoors in Fine-tuned Robot AI Models</div>
-          <div class="research-where">ETH Robotics Club &nbsp;·&nbsp; <em>2026 – present</em></div>
-          <div class="research-desc">
-            When someone downloads a pre-trained AI model for a robot and fine-tunes it on their own data,
-            could that model already contain a hidden backdoor that wakes up during fine-tuning?
-            We're adapting this threat model from language models to the robotics setting, where a triggered
-            backdoor has real physical consequences.
-          </div>
-        </div>
-      </div>
-
-      <div class="research-item">
-        <div class="research-thumb">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="thumb-icon">
-            <circle cx="24" cy="24" r="14" stroke="#b84c2e" stroke-width="3" fill="none"/>
-            <path d="M16 18 L32 18 L32 30 L16 30 Z" fill="#b84c2e" opacity="0.5"/>
-            <path d="M20 24 L28 24" stroke="#b84c2e" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="research-body">
-          <div class="research-title">Attacking and Defending Robot AI at Inference Time</div>
-          <div class="research-where">ETH Robotics Club &nbsp;·&nbsp; <em>2026 – present</em></div>
-          <div class="research-desc">
-            We're stress-testing AI models that control robots by feeding them adversarial inputs
-            at every stage — what the model sees, how it understands instructions,
-            and what actions it outputs.
-            We're also building defenses inspired by prompt-injection-prevention techniques
-            from language model security, applied to the robotics pipeline.
-          </div>
-        </div>
-      </div>
-
-      <div class="research-item">
-        <div class="research-thumb">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="thumb-icon">
-            <rect x="10" y="10" width="12" height="12" rx="2" fill="#2a4a7f"/>
-            <rect x="26" y="10" width="12" height="12" rx="2" fill="#2a4a7f" opacity="0.5"/>
-            <rect x="10" y="26" width="12" height="12" rx="2" fill="#2a4a7f" opacity="0.5"/>
-            <rect x="26" y="26" width="12" height="12" rx="2" fill="#2a4a7f"/>
-            <path d="M22 16 L26 16 M32 22 L32 26 M22 32 L26 32 M16 22 L16 26" stroke="#2a4a7f" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <div class="research-body">
-          <div class="research-title">zkFHE — Proving Things About Encrypted Computations</div>
-          <div class="research-where">COMPSEC Lab, EPFL &nbsp;·&nbsp; <em>Feb 2025 – Dec 2025</em> &nbsp;·&nbsp; Supervisor: Christian Knabenhans</div>
-          <div class="research-desc">
-            Designed and built a fast, modular library for creating cryptographic proofs that a computation
-            was done correctly — even when the data it ran on was fully encrypted throughout.
-            Started as a semester project and grew into a full implementation and research paper,
-            in collaboration with Prof. Chiesa's group.
-          </div>
-        </div>
-      </div>
-
-      <div class="research-item">
-        <div class="research-thumb">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="thumb-icon">
-            <path d="M24 8 L38 36 L10 36 Z" fill="none" stroke="#6b6560" stroke-width="2.5"/>
-            <circle cx="24" cy="22" r="4" fill="#6b6560"/>
-            <line x1="24" y1="26" x2="24" y2="33" stroke="#6b6560" stroke-width="2"/>
-          </svg>
-        </div>
-        <div class="research-body">
-          <div class="research-title">Post-Quantum Proof Systems at Nethermind</div>
-          <div class="research-where">Nethermind &nbsp;·&nbsp; <em>Sept – Dec 2024</em> &nbsp;·&nbsp; Cryptography Research Intern</div>
-          <div class="research-desc">
-            Contributed to the Rust implementation of LatticeFold, a proof system
-            built on lattice math that remains secure against quantum computers.
-            Also surveyed candidate post-quantum signature schemes for integration
-            into production infrastructure.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── Education ── -->
-  <section class="section">
-    <div class="section-title">Education</div>
-    <div class="edu-list">
-      <div class="edu-item">
-        <div>
-          <div class="edu-degree">Joint M.Sc. in Cybersecurity</div>
-          <div class="edu-school"><a href="https://www.epfl.ch">EPFL</a> &amp; <a href="https://ethz.ch">ETH Zurich</a></div>
-        </div>
-        <div class="edu-year">2024 – 2027</div>
-      </div>
-      <div class="edu-item">
-        <div>
-          <div class="edu-degree">B.Sc. in Computer Science</div>
-          <div class="edu-school"><a href="https://www.epfl.ch">EPFL</a></div>
-        </div>
-        <div class="edu-year">2021 – 2024</div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>Design inspired by <a href="https://jonbarron.info/">Jon Barron's website</a>.</p>
-  </footer>
-
-</div>
 </body>
+
 </html>
